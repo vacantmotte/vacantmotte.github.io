@@ -1,0 +1,379 @@
+/* Change colors and fonts here */
+:root {
+    --burgericon:url(/assets/burger.svg); /* Path to burger vector */
+    --closeicon:url(/assets/close.svg); /* Path to close vector */
+
+    /* FONTS */
+    --bodyfont: helvetica;
+    --headerfont: courier;
+
+    /* COLORS */
+
+    --background:#D3DCBD; /*Main background color*/
+    --color:#382c23; /*Body text color*/
+
+    --header:#D3DCBD; /*Header background color*/
+
+    /* CONTENT COLORS */
+    --mainbg: #B9CCB6; /*Content background color*/
+    --linkcolor: #4c8f5d; /*Body link color*/
+    --linkhover: #89968B; /*Body link hover color*/
+
+    --borders: #D3DCBD; /*Border for header 1*/
+
+    --formbg:#D3DCBD; /*Background for text boxes/dropdown menus*/
+    --formcolor:#4c8f5d; /*Color for text boxes/dropdown menus*/
+    --buttonbg:#2e4d36; /*Background for submit buttons*/
+    --buttoncolor:#4c8f5d; /*Color for submit buttons*/
+
+    /* MENU COLORS */
+    --navcolor:#382c23; /*Menu text color*/
+    --navbg:#D3DCBD; /*Menu background color*/
+
+    --navtextlink:#4c8f5d; /*Sidebar text link color*/
+    --navtexthover:#89968B; /*Sidebar text link hover*/
+
+    --navlink: #4c8f5d; /*Menu link color*/
+    --navlinkbg: #D3DCBD; /*Menu link background*/
+    --navhover: #89968B; /*Menu link hover color*/
+    --navhoverbg: #B9CCB6; /*Menu link hover background*/
+
+    --burger:#382c23; /*Color for hamburger menu text/icons*/
+    --overlay:rgb(0,0,0,0.3); /*Color for overlay when hamburger menu is open*/
+    
+    /* FOOTER COLORS */
+    --footercolor:#382c23; /*Footer text color*/
+    --footerbg:#2e4d36; /*Footer background color*/
+
+    --footerlink:#4c8f5d; /*Footer link color*/
+    --footerhover:#89968B; /*Footer background color*/
+}
+
+* { margin:0; padding:0; text-decoration:none;}
+img {
+    max-width:95%;
+    margin:5px;
+}
+
+
+body {
+    font:1.05rem var(--bodyfont);
+    color:var(--color);
+    background:var(--background);
+}
+
+/* Header styling */
+
+header {
+    width:100%;
+    height:350px; /* You can change the height */
+    background: url(header.JPG) no-repeat center var(--header); /*The url field is where you add a header image*/
+    background-size:cover;
+    margin-bottom:10px;
+}
+
+/* Container styling */
+
+#container {
+    width:95%;
+    max-width:1000px;
+    margin:auto;
+    padding:10px;
+}
+
+/* Wrapper for columns */
+
+#columns {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+/* Content styling */
+
+main {
+    width:calc(60% - 30px);
+    padding:15px;
+    background:var(--mainbg);
+    margin:0px 10px 0px 10px;
+}
+
+main h1 {
+    font:1.8em var(--headerfont);
+    border-bottom:1px solid var(--borders);
+}
+
+main h2 {
+    font:1.6em var(--headerfont);
+    margin:5px 0 5px 0;
+}
+
+main h3 {
+    font:1.4em var(--headerfont);
+}
+
+/* Paragraphs and links */
+
+p {
+    margin:10px 0px 10px 0px;
+    line-height:1.5;
+}
+
+main a {
+    color:var(--linkcolor);
+    text-decoration:underline;
+}
+
+main a:hover {
+    color:var(--linkhover);
+    text-decoration:none;
+}
+
+main details {
+    padding:10px;
+    background:var(--details);
+    margin:5px;
+}
+
+/* Form elements */
+
+main input, textarea, select {
+    color:var(--formcolor);
+    background:var(--formbg);
+    font:1rem var(--bodyfont);
+    border:1px solid;
+    padding:5px;
+}
+
+main button {
+    color:var(--buttoncolor);
+    background:var(--buttonbg);
+    font:1rem var(--bodyfont);
+    border:1px solid;
+    padding:5px;
+}
+
+/* Lists */
+
+main ul, ol { 
+    list-style-position:outside;
+    margin:5px 0 5px 30px;
+}
+
+main li {
+    margin:7px 0 7px 0;
+    line-height:1.5;
+}
+
+main li a {
+    text-decoration:none;
+}
+
+
+/* Styling for the sidebars */
+
+.menu {
+    padding:10px;
+    background:var(--navbg);
+    width:calc(20% - 30px);
+    font-size:0.9rem;
+}
+
+.menu section {
+    margin-bottom:10px;
+}
+
+
+.menu .text p {
+    color:var(--navcolor);
+    margin:5px 0px 5px 0px;
+    line-height:1.4;
+    font-size:0.9rem;
+
+}
+
+.menu .text a {
+    color:var(--navtextlink);
+    text-decoration:none;
+}
+
+.menu .text a:hover {
+    color:var(--navtexthover);
+    text-decoration:underline;
+}
+
+.menu ul {
+    list-style:none;
+    margin:0;
+}
+
+.menu li a {
+    display:block;
+    background:var(--navlinkbg);
+    color:var(--navlink);
+    margin:0px 0px 2px 0px;
+    text-decoration:none;
+    padding:2px;
+}
+
+.menu li a:hover {
+    background:var(--navhoverbg);
+    color:var(--navhover);
+    text-decoration:none;
+}
+
+.menu h2 {
+    font:1.3em var(--headerfont);
+    color:var(--navcolor)
+}
+
+/* Footer styling */
+
+footer {
+    padding:15px;
+    text-align:center;
+    margin:10px 0px 0px 0px;
+    background:var(--footerbg);
+    color:var(--footercolor);
+    font-size:0.9em;
+}
+
+footer a {
+    color:var(--footerlink);
+    text-decoration:underline;
+}
+
+footer a:hover {
+    color:var(--footerhover);
+    text-decoration:none;
+}
+
+/* Hamburger menu */
+
+#burger {
+    display:none;
+    width:100%;
+    position:fixed;
+    top:0;
+}
+
+#burger summary {
+    list-style-type: none;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    color:var(--burger);
+    padding:5px;
+    background:var(--background);
+}
+
+#burger summary::before, #burger[open]>summary::before {
+    height:40px;
+    width:40px;
+    background:var(--burger);
+}
+
+#burger summary::-webkit-details-marker {
+    display: none;
+}
+
+#burger summary::before {
+    content: '';
+    mask-image:var(--burgericon);
+    -webkit-mask-image:var(--burgericon);
+    mask-size:40px;
+    -webkit-mask-size:40px;
+}
+
+#burger[open]>summary::before {
+    content: '';
+    mask-image:var(--closeicon);
+    -webkit-mask-image:var(--closeicon);
+    mask-size:40px;
+    -webkit-mask-size:40px;
+}
+
+#burger[open] {
+    position:fixed;
+    background:var(--overlay);
+}
+
+.skip a {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+ 
+.skip a:focus {
+    position:static;
+    width:auto;
+    height:auto;
+}
+
+#burger-menu {
+    height:calc(100vh - 70px);
+    overflow:auto;
+    z-index:1000;
+    background:var(--navbg);
+    width:200px;
+}
+
+/* Accessibility stuff */
+
+#skip a {
+    position:absolute;
+    display:inline-block;
+    left:0px;
+    top:-1000px;
+    overflow:hidden;
+    transition:top 0.5s ease;
+    background:var(--mainbg);
+    color:var(--link);
+    z-index:1100;
+    padding:5px;
+}
+ 
+#skip a:focus {
+    top: 0;
+    transition:top 0.5s ease;
+}
+
+.desktopmenulink { display:inline; }
+.mobilemenulink { display:none; }
+
+@media screen and (max-width: 799px) {
+    #container {
+        width:calc(100 - 20px);
+        margin-top:50px;
+    }
+    
+    #columns {
+        display:block;
+    }
+    
+    main {
+        margin:auto;
+        width:calc(100% - 30px);
+    }
+    
+    #left {
+        display:none;
+    }
+    
+    #burger {
+        display:block;
+    }
+    
+    #right {
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap:5px;
+        width:calc(100% - 20px);
+        margin-top:10px;
+    }
+
+    .desktopmenulink { display:none; }
+    .mobilemenulink { display:inline; }
+}
