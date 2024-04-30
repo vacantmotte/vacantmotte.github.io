@@ -377,3 +377,17 @@ footer a:hover {
     .desktopmenulink { display:none; }
     .mobilemenulink { display:inline; }
 }
+
+
+
+
+
+
+
+
+/* MY STUFF */
+
+#frame {
+    width: 100%;
+    height: 500px;
+}
